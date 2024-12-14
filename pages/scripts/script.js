@@ -1,85 +1,149 @@
-gsap.timeline({ repeat: -1 }) 
-    .to(".circle", {
-        duration: 1,
-        scale: 1,
-        ease: "elastic.out(1, 0.5)",
-        stagger: 0.2
-    })
-    .to("#Welcoming_devfest h1", {
-        duration: 1,
-        opacity: 1,
-        y: -20,
-        ease: "power3.out"
-    }, "-=0.5")
-    .to("#Welcoming_devfest h2", {
-        duration: 1,
-        opacity: 1,
-        y: -10,
-        ease: "power3.out"
-    }, "-=0.5")
-    .to(".circle", {
-        duration: 1,
-        x: 0,
-        y: 0,
-        stagger: 0.2,
-        scale: 0,
-        delay: 1
-    })
-    .to(["#Welcoming_devfest h1", "#Welcoming_devfest h2"], {
-        opacity: 0,
-        duration: 0.5
-    });
-    document.addEventListener("DOMContentLoaded", () => {
 
-        gsap.to(".scroll-arrow", {
-            y: 20,
-            duration: 1,
-            repeat: -1,
-            yoyo: true,
-            ease: "power1.inOut"
-        });
- 
-        const scrollArrow = document.getElementById("scroll-arrow");
-        const targetSection = document.getElementById("whats-devfest");
-    
-        scrollArrow.addEventListener("click", () => {
-            targetSection.scrollIntoView({ behavior: "smooth" });
-        });
-    });
-    
-    // Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", () => {
-    // Animating the heading with a smooth slide and fade (slower version)
-    gsap.from("#whats-devfest .content h2", {
+
+    const timeline = gsap.timeline();
+
+    timeline.from(".welcoming_devfest h1", {
+        duration: 1,
+        y: -50,
         opacity: 0,
-        y: -30,
-        duration: 3, 
-        ease: "power3.out",
-        delay: 0.3,
-        repeat: -1,  
-        yoyo: true   
+        ease: "power2.out",
+    });
+
+    timeline.from(".welcoming_devfest p", {
+        duration: 1,
+        y: 30,
+        opacity: 0,
+        ease: "power2.out",
+    }, "-=0.5"); 
+
+    timeline.from(".icons i", {
+        duration: 1,
+        scale: 0.5,
+        opacity: 0,
+        stagger: 0.2,
+        ease: "bounce.out",
     });
 
 
-    gsap.from("#whats-devfest .content p", {
-        opacity: 0,
+    timeline.from(".down-arrow", {
+        duration: 0.8,
         y: 50,
-        duration: 3,  
-        ease: "power3.out",
-        delay: 0.5,
-        repeat: -1, 
-        yoyo: true   
+        opacity: 0,
+        ease: "power2.out",
+    }, "-=0.5");
+});
+
+
+document.querySelector(".down-arrow").addEventListener("click", (e) => {
+    e.preventDefault();
+    const nextSection = document.querySelector("#next_section");
+    nextSection.scrollIntoView({ behavior: "smooth" });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    gsap.from("#defining_event .text-content", {
+        scrollTrigger: {
+            trigger: "#defining_event",
+            start: "top 80%",
+        },
+        duration: 1,
+        x: -50,
+        opacity: 0,
+        ease: "power2.out",
     });
 
-
-    gsap.from("#whats-devfest .image-container img", {
+    gsap.from("#defining_event .image-content img", {
+        scrollTrigger: {
+            trigger: "#defining_event",
+            start: "top 80%",
+        },
+        duration: 1,
+        x: 50,
         opacity: 0,
-        scale: 0.8,
-        rotation: 5,
-        duration: 4,  
-        ease: "power3.out",
-        delay: 0.7,
-        repeat: -1,  
-        yoyo: true    
+        ease: "power2.out",
+    });
+});
+document.addEventListener("DOMContentLoaded", () => {
+
+    const downArrow = document.querySelector(".down-arrow");
+
+    downArrow.addEventListener("click", (e) => {
+        e.preventDefault(); 
+        const targetSection = document.querySelector("#defining_event");
+
+   //pour le navigation vers next section 
+        targetSection.scrollIntoView({
+            behavior: "smooth", 
+            block: "start"    
+        });
+    });
+});
+
+window.onload = () => {
+
+    const leftImages = document.querySelectorAll('.left_images .img_left1, .left_images .img_left2, .left_images .img_left3');
+    const rightImages = document.querySelectorAll('.right_images .img_right1, .right_images .img_right2, .right_images .img_right3');
+
+    gsap.fromTo(leftImages, 
+        { opacity: 0, x: -200, scale: 0.5 }, 
+        { 
+            opacity: 1, 
+            x: 0, 
+            scale: 1, 
+            stagger: 0.3, 
+            duration: 1.5, 
+            ease: "power3.out", 
+            repeat: -1,
+            yoyo: true 
+        }
+    );
+
+
+    gsap.fromTo(rightImages, 
+        { opacity: 0, x: 200, scale: 0.5 },
+        { 
+            opacity: 1, 
+            x: 0, 
+            scale: 1, 
+            stagger: 0.3, 
+            duration: 1.5, 
+            ease: "power3.out", 
+            repeat: -1,
+            yoyo: true 
+        }
+    );
+};
+
+window.addEventListener('DOMContentLoaded', () => {
+    gsap.from('.image-content .image', {
+     
+        y: 50, 
+        scale: 0.95,
+        rotate: 10,
+        stagger: 0.2, 
+        duration: 1.5,
+        ease: 'power3.out', 
+    });
+
+    const images = document.querySelectorAll('.image-content .image');
+    images.forEach(image => {
+        image.addEventListener('mouseenter', () => {
+            gsap.to(image, {
+                scale: 1.05,
+                rotate: 0,
+                duration: 0.3,
+                ease: 'power1.inOut',
+            });
+        });
+
+        image.addEventListener('mouseleave', () => {
+            gsap.to(image, {
+                scale: 1,
+                rotate: 10,
+                duration: 0.3,
+                ease: 'power1.inOut',
+            });
+        });
     });
 });
