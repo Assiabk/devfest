@@ -9,6 +9,7 @@ body {
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 * {
@@ -153,16 +154,23 @@ margin-left: 30px;
 
 
 .down-arrow {
-    transform: translateX(-50%); 
+    position: absolute;
+ top: 92%;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 2rem;
     color: #4285F4;
     animation: bounce 2s infinite;
     text-decoration: none;
     transition: color 0.3s ease, transform 0.3s ease;
 }
-.down-arrow :hover{
- color: #34A853;
+
+.down-arrow:hover {
+    color: #34A853; 
+    transform: translateX(-50%) translateY(5px); 
 }
+
+
 
 @keyframes bounce {
     0%, 100% {
@@ -256,12 +264,12 @@ margin-left: 30px;
 }
 
 .image-content .image:nth-child(2) {
-    width: 350px; 
+    width: 300px; 
     height: auto;
     z-index: 1;  
 }
 .image-content .image:nth-child(1) {
-    width: 350px;  
+    width: 260px;  
     height: auto;
     z-index: 1;  
 }

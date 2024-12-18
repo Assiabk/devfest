@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="pages/styles/index.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="shortcut icon" href="pages/images/gdg_icon.ico" type="image/x-icon">
 
 
@@ -84,18 +86,60 @@
             <i class="fas fa-chevron-down"></i>
         </a>
     </section>
-    
-<!-- reasons pour la participation -->
-<section id="why_attending">
-
+    <!-- reasons pour la participation -->
+<section id="why_attending" class="py-12 bg-white relative overflow-hidden">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-extrabold text-gray-900 tracking-wider">Why You Should Attend <span class="text-blue-500">DevFest</span> <span class="text-red-500">GDG</span> <span class="text-green-500">Ghardaia</span></h2>
+        <p class="text-lg text-gray-600 mt-2">Discover, Learn, and Connect with Tech Enthusiasts!</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+        <!-- Card 1 -->
+        <div class="relative group bg-gradient-to-br from-blue-500 to-blue-700 text-white p-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:rotate-2">
+          <div class="absolute -top-3 -left-3 w-10 h-10 bg-yellow-400 rounded-full opacity-80 group-hover:scale-125 transition"></div>
+          <i class="fas fa-code text-4xl mb-3 group-hover:text-yellow-300 transition-transform transform group-hover:scale-110"></i>
+          <h3 class="text-xl font-bold mb-2">Enhance Your Skills</h3>
+          <p class="text-sm opacity-90">Attend hands-on workshops and coding sessions to level up your development skills.</p>
+        </div>
   
-</section>
-
-
-
-
+        <!-- Card 2 -->
+        <div class="relative group bg-gradient-to-br from-red-500 to-red-700 text-white p-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:-rotate-2">
+          <div class="absolute -bottom-3 -right-3 w-10 h-10 bg-green-400 rounded-full opacity-80 group-hover:scale-125 transition"></div>
+          <i class="fas fa-users text-4xl mb-3 group-hover:text-green-300 transition-transform transform group-hover:scale-110"></i>
+          <h3 class="text-xl font-bold mb-2">Network with Experts</h3>
+          <p class="text-sm opacity-90">Meet developers, and fellow enthusiasts to build meaningful connections.</p>
+        </div>
   
-    </section>
+        <!-- Card 3 -->
+        <div class="relative group bg-gradient-to-br from-yellow-400 to-yellow-600 text-white p-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:rotate-2">
+          <div class="absolute -top-3 -right-3 w-10 h-10 bg-blue-400 rounded-full opacity-80 group-hover:scale-125 transition"></div>
+          <i class="fas fa-lightbulb text-4xl mb-3 group-hover:text-blue-300 transition-transform transform group-hover:scale-110"></i>
+          <h3 class="text-xl font-bold mb-2">Get Inspired</h3>
+          <p class="text-sm opacity-90">Explore new technologies and innovative ideas to inspire your next big project.</p>
+        </div>
+  
+        <!-- Card 4 -->
+        <div class="relative group bg-gradient-to-br from-green-500 to-green-700 text-white p-4 rounded-lg shadow-md transform transition duration-300 hover:scale-105 hover:-rotate-2">
+          <div class="absolute -bottom-3 -left-3 w-10 h-10 bg-red-400 rounded-full opacity-80 group-hover:scale-125 transition"></div>
+          <i class="fas fa-users text-4xl mb-3 group-hover:text-red-300 transition-transform transform group-hover:scale-110"></i>
+          <h3 class="text-xl font-bold mb-2">Be Part of Our Club</h3>
+          <p class="text-sm opacity-90">Join a passionate community of tech enthusiasts who come together to learn, grow, and create!</p>
+        </div>
+      </div>
+      <a href="#schedual" class="down-arrow">
+        <i class="fas fa-chevron-down"></i>
+    </a>
+      <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-r from-red-500 to-blue-500 opacity-10 transform -skew-y-6"></div>
+      <div class="absolute bottom-0 right-0 w-full h-32 bg-gradient-to-r from-green-500 to-yellow-500 opacity-10 transform skew-y-6"></div>
+    </div>
+ 
+  </section>
+  
+
+
+
+
+
     <!-- le programme -->
     <section id="schedual">
 <div class="plan_devfest">
