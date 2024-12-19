@@ -147,3 +147,22 @@ window.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById('registration-form');
+    const modal = document.getElementById('alert-modal');
+    const alertMessage = document.getElementById('alert-message');
+    const closeModal = document.getElementById('close-modal');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        if (name) {
+            alertMessage.textContent = `Thank you, ${name}! You've successfully registered for DevFest 24.`;
+            modal.classList.remove('hidden'); // Show modal
+        }
+    });
+
+    closeModal.addEventListener('click', () => {
+        modal.classList.add('hidden'); // Hide modal
+    });
+});

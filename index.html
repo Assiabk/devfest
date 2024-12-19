@@ -126,13 +126,13 @@
           <p class="text-sm opacity-90">Join a passionate community of tech enthusiasts who come together to learn, grow, and create!</p>
         </div>
       </div>
-      <a href="#schedual" class="down-arrow">
-        <i class="fas fa-chevron-down"></i>
-    </a>
+   
       <div class="absolute top-0 left-0 w-full h-32 bg-gradient-to-r from-red-500 to-blue-500 opacity-10 transform -skew-y-6"></div>
       <div class="absolute bottom-0 right-0 w-full h-32 bg-gradient-to-r from-green-500 to-yellow-500 opacity-10 transform skew-y-6"></div>
     </div>
- 
+    <a href="#schedule" class="down-arrow">
+        <i class="fas fa-chevron-down"></i>
+      </a>
   </section>
   
 
@@ -140,27 +140,183 @@
 
 
 
-    <!-- le programme -->
-    <section id="schedual">
-<div class="plan_devfest">
-
-</div>
-    </section>
-    <!-- sponsors -->
-     <section id="sponsors">
-<div class="devfest_sponsors">
-
-</div>
-     </section>
-     <!-- formulaire de inscription -->
-      <section id="registration">
-        <div class="devfest_form">
-
+  <section id="schedule" class="py-12 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 tracking-wider">What You'll Experience at DevFest</h2>
+      <p class="text-lg text-gray-600 mt-2">Stay updated with the timeline of DevFest events.</p>
+      
+      <!-- Timeline -->
+      <div class="mt-10 md:max-w-4xl mx-auto">
+        <!-- Event 1 -->
+        <div class="relative flex items-center flex-col text-center md:flex-row md:mb-8">
+          <div class="flex items-center justify-center w-12 h-12 bg-blue-500 text-white rounded-full">
+            <span>1</span>
+          </div>
+          <div class="mt-4 md:mt-0 md:ml-6">
+            <h3 class="text-xl font-bold text-gray-800">Session 1</h3>
+            <p class="text-gray-500 text-sm">9:00 AM - 10:00 AM</p>
+            <p class="text-gray-700 mt-2">Details about this session will be shared soon.</p>
+          </div>
         </div>
-      </section>
-      <!-- footer -->
-
-
+  
+        <!-- Event 2 -->
+        <div class="relative flex items-center flex-col text-center md:flex-row md:mb-8">
+          <div class="flex items-center justify-center w-12 h-12 bg-blue-500 text-white rounded-full">
+            <span>2</span>
+          </div>
+          <div class="mt-4 md:mt-0 md:ml-6">
+            <h3 class="text-xl font-bold text-gray-800">Session 2</h3>
+            <p class="text-gray-500 text-sm">10:30 AM - 12:00 PM</p>
+            <p class="text-gray-700 mt-2">Details about this session will be shared soon.</p>
+          </div>
+        </div>
+  
+        <!-- Event 3 -->
+        <div class="relative flex items-center flex-col text-center md:flex-row">
+          <div class="flex items-center justify-center w-12 h-12 bg-blue-500 text-white rounded-full">
+            <span>3</span>
+          </div>
+          <div class="mt-4 md:mt-0 md:ml-6">
+            <h3 class="text-xl font-bold text-gray-800">Session 3</h3>
+            <p class="text-gray-500 text-sm">1:00 PM - 2:30 PM</p>
+            <p class="text-gray-700 mt-2">Details about this session will be shared soon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="sponsors" class="py-12 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-extrabold text-gray-900 tracking-wider mb-6">
+        A Big Thanks to Our Sponsors
+      </h2>
+      <div class="sponsors-wrapper">
+        <div class="sponsors-gallery">
+          <div class="sponsor-circle">
+            <img src="pages/images/devfest.png" >
+          </div>
+          <div class="sponsor-circle">
+            <img src="pages/images/devfest.png" >
+          </div>
+          <div class="sponsor-circle">
+            <img src="pages/images/devfest.png" >
+          </div>
+          <div class="sponsor-circle">
+            <img src="pages/images/devfest.png" >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="bg-gray-900 text-gray-100 py-10">
+    <div class="container mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- About Section -->
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-blue-500">About DevFest Ghardaia</h3>
+          <p class="text-sm leading-6">
+            DevFest Ghardaia is an exciting opportunity to connect with developers, explore cutting-edge technologies, and innovate together.
+          </p>
+        </div>
+  
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-green-500">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#defining_event" class="hover:underline">What is DevFest?</a></li>
+            <li><a href="#why_attending" class="hover:underline">Why Attend?</a></li>
+            <li><a href="#schedule" class="hover:underline">Schedule</a></li>
+            <li><a href="#sponsors" class="hover:underline">Sponsors</a></li>
+          </ul>
+        </div>
+  
+        <!-- Social Media -->
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-red-500">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a href="https://www.facebook.com/GDG.Ghardaia" class="text-gray-300 hover:text-blue-400">
+              <i class="fab fa-facebook fa-2x"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/gdg-ghardaia/posts/?feedView=all" class="text-gray-300 hover:text-blue-500">
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UC84y51R3JCFQSr0aJEYxsaA" class="text-gray-300 hover:text-red-500">
+              <i class="fab fa-youtube fa-2x"></i>
+            </a>
+            <a href="https://www.instagram.com/gdg.ghardaia/" class="text-gray-300 hover:text-purple-500">
+              <i class="fab fa-instagram fa-2x"></i>
+            </a>
+          </div>
+        </div>
+  
+        <!-- Registration Form -->
+        <div>
+          <h3 class="text-lg font-bold mb-4 text-yellow-500">Want to Join DevFest?</h3>
+          <p class="mb-4 text-sm">
+            Excited to take part in our DevFest? Register now and stay updated with the latest announcements.
+          </p>
+          <form id="registrationForm" onsubmit="handleRegistration(event)" class="space-y-4">
+            <input
+              type="text"
+              name="fullName"
+              placeholder="Full Name"
+              class="w-full px-4 py-2 text-gray-800 rounded-md"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              class="w-full px-4 py-2 text-gray-800 rounded-md"
+              required
+            />
+            <button
+              type="submit"
+              class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 rounded-md"
+            >
+              Register Now
+            </button>
+          </form>
+        </div>
+      </div>
+  
+      <!-- Footer Bottom -->
+      <div class="mt-10 text-center text-gray-500 text-sm border-t border-gray-800 pt-6">
+        <p>&copy; 2024 DevFest Ghardaia. All Rights Reserved.</p>
+      </div>
+    </div>
+  
+    <!-- Success Modal -->
+    <div
+      id="successModal"
+      class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center"
+    >
+      <div class="bg-white p-6 rounded-lg shadow-lg text-center">
+        <h2 class="text-lg font-bold mb-4 text-gray-800">You're Registered!</h2>
+        <p class="text-sm text-gray-600">Thank you for registering. We're excited to see you at DevFest!</p>
+        <button
+          onclick="closeModal()"
+          class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-md"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </footer>
+  
+  <script>
+    function handleRegistration(event) {
+      event.preventDefault();
+      document.getElementById('successModal').classList.remove('hidden');
+    }
+  
+    function closeModal() {
+      document.getElementById('successModal').classList.add('hidden');
+    }
+  </script>
+  
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
       <script src="pages/scripts/script.js">
