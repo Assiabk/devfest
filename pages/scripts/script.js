@@ -158,11 +158,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const name = document.getElementById('name').value;
         if (name) {
             alertMessage.textContent = `Thank you, ${name}! You've successfully registered for DevFest 24.`;
-            modal.classList.remove('hidden'); // Show modal
+            modal.classList.remove('hidden'); 
         }
     });
 
     closeModal.addEventListener('click', () => {
-        modal.classList.add('hidden'); // Hide modal
+        modal.classList.add('hidden'); 
     });
 });
