@@ -166,3 +166,11 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.classList.add('hidden'); 
     });
 });
+function handleRegistration(event) {
+    event.preventDefault();
+    document.getElementById('successModal').classList.remove('hidden');
+  }
+
+  function closeModal() {
+    document.getElementById('successModal').classList.add('hidden');
+  }
